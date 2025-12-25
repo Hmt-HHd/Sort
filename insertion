@@ -1,0 +1,47 @@
+#include<stdio.h>
+void arr(int a[], int n);
+void in(int a[], int n);
+void insertion(int a[], int n);
+
+void arr(int a[], int n)
+{
+    for(int i = 0; i < n; i++)
+    {
+        printf("Phan tu %d: ", i + 1);
+        scanf("%d", &a[i]);
+    }
+}
+
+void in(int a[], int n)
+{
+    for(int i = 0; i < n; i++)
+    {
+        printf("%d. %d\n", i + 1, a[i]);
+    }
+}
+
+void insertion(int a[],int n)
+{
+    int x;int vt;
+    for(int i=1;i<n-1;i++)
+    {
+        x=a[i];
+        vt=i;
+        while(vt>0&&a[vt-1]<x)
+        {
+            a[vt]=a[vt-1];
+            vt--;
+        }
+        a[vt]=x;
+    }
+}
+
+int main()
+{
+    int a[10],n;
+    printf("Nhap n: ");
+    scanf("%d",&n);
+    arr(a,n);
+    insertion(a,n);
+    in(a,n);
+}
