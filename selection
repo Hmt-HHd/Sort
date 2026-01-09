@@ -50,7 +50,7 @@ int main()
     printf("Nhap vao so phan tu: ");
     scanf("%d", &n);
 
-    arr(a, n);
+
     selection(a, n);
     in(a, n);
 
